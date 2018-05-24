@@ -30,19 +30,20 @@ def softmax(x):
     return e_x / e_x.sum()
 
 
-def read_csv(filename = 'data/emojify_data.csv'):
+def read_csv(filename = './train.csv'):
     phrase = []
     emoji = []
 
     with open (filename) as csvDataFile:
         csvReader = csv.reader(csvDataFile)
+		print(csvReader)
 
         for row in csvReader:
             phrase.append(row[0])
             emoji.append(row[1])
 
     X = np.asarray(phrase)
-    Y = np.asarray(emoji, dtype=int)
+    Y = np.asarray(emoji)
 
     return X, Y
 
