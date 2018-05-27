@@ -133,7 +133,7 @@ print(tem4.shape)
 print(tem5.shape)
 # 5079//128
 
-len(word_to_index)
+#len(word_to_index)
 
 
 # In[64]:
@@ -163,7 +163,7 @@ with tf.variable_scope("decoding") as decoding_scope:
     lstm_dec = tf.contrib.rnn.BasicLSTMCell(nodes)
     dec_outputs, _ = tf.nn.dynamic_rnn(lstm_dec, inputs=ques_output_embedding, initial_state=last_state)
     
-logits = tf.contrib.layers.fully_connected(dec_outputs, num_outputs=len(word_to_index), activation_fn=None) 
+logits = tf.contrib.layers.fully_connected(dec_outputs, num_outputs=word_to_index, activation_fn=None) 
 with tf.name_scope("optimization"):
 #     print(logits.get_shape().as_list())
 #     print(targets.get_shape().as_list())
