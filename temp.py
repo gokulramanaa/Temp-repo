@@ -9,11 +9,11 @@ import pandas as pd
 import codecs
 import math
 from pandas.io.json import json_normalize as jsy
-#!pip install gensim
-from gensim.models import Word2Vec
-from nltk.corpus import brown # , #movie_review
+#pip install gensim
+#from gensim.models import Word2Vec
+#from nltk.corpus import brown # , #movie_review
 import numpy as np
-from textblob import TextBlob as tb
+#from textblob import TextBlob as tb
 import tensorflow as tf
 import random
 import os
@@ -46,8 +46,8 @@ def read_glove_vec(glove_file):
 # In[22]:
 
 
-word_to_index, index_to_word, word_to_vec_map = read_glove_vec('C:/Users/gokul/Documents/Deep_learning/New folder/C5W2A2 - Emojify - v2/data/glove.6B.50d.txt')
-
+#word_to_index, index_to_word, word_to_vec_map = read_glove_vec('C:/Users/gokul/Documents/Deep_learning/New folder/C5W2A2 - Emojify - v2/data/glove.6B.50d.txt')
+word_to_index = 400000
 # word = "expired"
 # index = 289846
 # print("the index of", word, "in the vocabulary is", word_to_index[word])
@@ -57,10 +57,10 @@ word_to_index, index_to_word, word_to_vec_map = read_glove_vec('C:/Users/gokul/D
 # In[2]:
 
 
-X = np.load('C:/Users/gokul/Documents/Projects/selqa-evaluater/X.npy')
-Y = np.load('C:/Users/gokul/Documents/Projects/selqa-evaluater/Y.npy')
-X_embedings = np.load('C:/Users/gokul/Documents/Projects/selqa-evaluater/X_embedings.npy')
-Y_embedings = np.load('C:/Users/gokul/Documents/Projects/selqa-evaluater/Y_embedings.npy')
+X = np.load('/data/X.npy')
+Y = np.load('/data/Y.npy')
+X_embedings = np.load('/data/X_embedings.npy')
+Y_embedings = np.load('/data/Y_embedings.npy')
 
 
 # In[4]:
