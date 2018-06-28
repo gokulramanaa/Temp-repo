@@ -19,8 +19,8 @@ from sklearn.utils import shuffle
 
 # li = ['timestamp', 'description','limit6','mailid','float']
 # temp = pd.read_csv("./dataset.csv")
-temp = pd.read_csv("C:/Users/gsoun/Downloads/Temp-repo-master/reld.csv", 
-                   delimiter='|', header=None, low_memory=False)
+temp = pd.read_csv("C:/Users/gokul/Downloads/dst.csv", 
+                            header=None, low_memory=False)
 
 temp.columns = temp.columns.astype(str)
 temp = shuffle(temp)
@@ -58,7 +58,7 @@ total = dict()
 cols = temp.columns
 lin = {key:set() for key in cols}
 
-
+li = ['0']
 rejli = {key:[] for key in cols}
 rejrli ={key:[] for key in cols}
 rejin = {key:set() for key in cols}
@@ -67,9 +67,16 @@ rejpd = pd.DataFrame(columns=temp.columns, index = range(300)) #.reindex_like(te
 
 startTime = datetime.now()
 def mapval(a, i):
+#    print(a)
     u,inv = np.unique(a,return_inverse= True)
-    te = tuple(np.array([d[x] for x in u])[inv])
-    lin[str(i)].add(te)
+#    print(u)
+    te = np.array([d[x] for x in u])[inv]
+#    print(te)
+    _,lind = np.unique(te, return_index=True)
+    va = tuple(te[np.sort(lind)])
+#    print(va)
+#    print(te)
+    lin[str(i)].add(va)
 
 def trainmode():
     for i in cols:
@@ -97,7 +104,10 @@ print(datetime.now() - startTime)
 startTime = datetime.now()
 def tmapval(a, i):
     u,inv = np.unique(a,return_inverse= True)
-    te = tuple(np.array([d[x] for x in u])[inv])
+    te = np.array([d[x] for x in u])[inv]
+#    te = tuple(np.array([d[x] for x in u])[inv])
+    _,lind = np.unique(te, return_index=True)
+    te = tuple(te[np.sort(lind)])
     if te not in lin[str(i)]:
         try:
             rejin[str(i)].update(tempn[indi[str(i)].get_loc("".join(a))].index)
@@ -107,7 +117,7 @@ def tmapval(a, i):
         rejrli[str(i)].append(a)
         
 def feature_mapping():
-    for i in ['0']:
+    for i in cols:
         ind = 0
         tdf = pd.DataFrame(tedf[str(i)].map(str).apply(list))
         indi[str(i)] = pd.Index(tempn[str(i)])
@@ -144,53 +154,3 @@ def feature_mapping():
 
 x = feature_mapping()
 print(datetime.now() - startTime)
-
-
-# =============================================================================
-# startTime = datetime.now()
-# def feature_map():
-#     count = 0
-#     for i in cols:
-#         ind = 0
-#         tdf = pd.DataFrame(tempn[str(i)].map(str).apply(list))
-#         for j in tdf.iterrows():
-#             u,inv = np.unique(j[1][0],return_inverse= True)
-#             te = tuple(np.array([d[x] for x in u])[inv])
-#             if te not in lin[str(i)]:
-#                 rejin[str(i)].append(j[0])
-#                 rejli[str(i)].append(te)
-#                 rejrli[str(i)].append(j[1][0])
-#         print("Number of rejected items in",str(i),"is", len(rejli[str(i)]),"\n")
-#         if rejli[str(i)] !=[]:
-#             for j in rejli[str(i)]:
-#                 tr = nltk.ngrams(j,mingram[str(i)])
-#                 if list(tr) == []:
-#                     vi = 0
-#                     tem = rejrli[str(i)][rejli[str(i)].index(j)]
-#                     rejpd.at[ind, str(i)] = str("".join(tem[1:-1]))
-#                     ind+=1
-#                     continue
-#                 else:
-#                     tr = nltk.ngrams(j,mingram[str(i)])
-#                     cpairs = (((w[:-1]), w[-1]) for w in tr)
-#                     co = 0
-#                     vi = 0
-#                     for k in list(cpairs):
-#                         v = cfd[str(i)][k[0]][k[1]]
-#                         if co == 0:
-#                             vi = v/total[str(i)]
-#                             co = 1
-#                         else:
-#                             vi *= v/total[str(i)]
-#                     if vi ==0:
-#                         tel = rejrli[str(i)][rejli[str(i)].index(j)]
-#                         rejpd.at[ind, str(i)] = str("".join(tel[1:-1]))
-#                         ind+=1
-#                     elif vi!=0:
-#                         pass
-# #                         print("Accepted after language mode:","".join(rejrli[str(i)][rejli[str(i)].index(j)]))
-# 
-# #rejin = {key:[] for key in cols}             
-# x = feature_map()
-# print(datetime.now() - startTime)
-# =============================================================================
