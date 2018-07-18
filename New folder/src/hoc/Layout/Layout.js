@@ -97,12 +97,12 @@ class Layout extends Component {
           if(item.Create_time === "2018-07-05 17:25:19"){
               temp.push(item)
             }});
-      } else if (this.state.selectedClient === "SST-PAM" && view == "Last Week"){
+      } else if (this.state.selectedClient === "SST-PAM" && view === "Last Week"){
         response.map((item,id) => {
           if(item.Create_time === "2018-07-05 17:25:20"){
             temp.push(item)
           }});
-      } else if (this.state.selectedClient === "SST-PAM" && view == "Last Month"){
+      } else if (this.state.selectedClient === "SST-PAM" && view === "Last Month"){
         response.map((item,id) => {
           if(item.Create_time === "2018-07-05 17:25:21") {
             temp.push(item)
