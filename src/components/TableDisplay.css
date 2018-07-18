@@ -1,0 +1,39 @@
+.App {
+  margin: 16px;
+}
+
+
+.Tabledisplay {
+    /*height: 56px;*/
+    width: 75%;
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*padding: 20px 280px;*/
+    margin: 214px 300px;
+    /*border: 1px solid #eee;*/
+    display: block;
+    text-align: center;
+    display: block;
+    overflow: auto;
+    /*top:20px;
+    bottom: 10px;
+    left: 280px;
+    right: 10px*/
+    /*background-color: #162DB4;*/
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
+    /*padding: 0 10px;*/
+    /*box-sizing: border-box;*/
+    /*z-index: 200;*/
+    /*transition: transform 0.3s ease-out;*/
+    /*float: left;*/
+}
+
+.Open {
+    /*transform: translateX(0);*/
+    /*width: 100%;*/
+    margin: 128px 300px;
+    /*padding: 20px 280px;*/
+    /*float: right;*/
+}

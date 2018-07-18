@@ -1,0 +1,19 @@
+.Content {
+	width: 100%;
+    /*padding-top: 10px;*/
+    /*padding-right: 50%;*/
+    /*padding: 15px;*/
+    /*position: relative;*/
+    /*background-color: #f4f4f4;*/
+    /*margin-top: 86px;*/
+}
+
+.UnderCons{
+	position: absolute;
+	padding-top: 96px;
+	padding-left: 280px;
+	/*background-color: red;*/
+	/*left: 50%;*/
+	/*margin-right: -50%;*/
+	/*display: inline;*/
+}

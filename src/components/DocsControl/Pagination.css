@@ -1,0 +1,11 @@
+.Pagination{
+	list-style: none;
+	display: flex;
+	margin-right: 0.3em;
+	color: blue;
+	user-select: none;
+	cursor: pointer;
+	padding: 10px;
+	text-indent: 10px;
+	z-index: 100;
+}

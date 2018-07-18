@@ -1,0 +1,10 @@
+<Route path = "/" exact 
+                    render = {()=> <h1>Under Construction </h1>} />
+                    <Route 
+                    path = "/trend-graph" exact 
+                    render = {()=> <h1>Under Construction </h1>} />
+                    <Route 
+                    path = "/status-report" exact 
+                    render = {(props) => (<Tabledisplay {...props} 
+                    open = {this.state.showSideDrawer}
+                    comp = {this.state.selecteditem}/>)}/>

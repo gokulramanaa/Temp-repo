@@ -1,0 +1,68 @@
+.Toolbar {
+    height: 86px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #162DB4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    z-index: 200;
+    transition: transform 0.3s ease-out;
+    /*float: left;*/
+}
+
+/*.Toolbar nav {
+    height: 100%;
+}*/
+
+.Logo {
+    height: 90%;
+}
+
+
+.Open {
+    transform: translateX(0);
+    width: 90%;
+    margin-right: 0%;
+    /*margin: auto;*/
+    left:280px;
+    /*right: -280px;*/
+    position: relative;
+    /*padding: auto;*/
+    /*float: right;*/
+}
+
+
+.Title {
+    color: white;
+    margin: auto;
+    letter-spacing: 0.2em;
+    word-spacing: 0.3em;
+    font-weight: bold;
+    display: inline;
+    float: none;
+}
+
+.Client{
+    display: flex;
+    flex-flow: row;
+    color: red;
+    /*position: fixed;*/
+    /*list-style: none;*/
+    /*margin: 2px 32px;*/
+    /*padding-right: 10%;*/
+    padding: 5px;
+    border-spacing: 3px;
+    /*align-items: center;*/
+}
+
+.Left{
+    float: left;
+    padding: 2px 10px;
+    font-style: bold;
+    font-size: 20px;
+}
