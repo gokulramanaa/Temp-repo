@@ -1,0 +1,33 @@
+/*.UserInput{
+  width: 60%;
+  margin: 16px auto;
+  border: 1px solid #eee;
+  box-shadow: 0 2x 3px #ccc;
+  padding: 16px;
+  text-align: center;
+}
+
+.UserOutput{
+  width: 60%;
+  margin: 16px auto;
+  border: 1px solid #eee;
+  box-shadow: 0 2x 3px #ccc;
+  padding: 16px;
+  text-align: center;
+}*/
+
+.TableMain{
+  /*width: 90%;*/
+  /*margin: 10px 10px;*/
+  /*border: 1px solid #eee;*/
+  /*box-shadow: 0 2x 3px #ccc;*/
+  /*padding: 16px;*/
+  /*text-align: center;
+  display: block;
+  overflow: auto;*/
+}
+
+/*.Header{
+  display: block;
+  overflow: auto;
+}*/

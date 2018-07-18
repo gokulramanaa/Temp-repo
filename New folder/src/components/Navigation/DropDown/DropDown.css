@@ -1,0 +1,12 @@
+.DropDown{
+	float: right;
+	display: inline-flex;
+	position: absolute;
+	top:0px;
+	/*size: 32;*/
+	height: 24px;
+	width: auto;
+	/*margin-right: 5%;*/
+	/*border: 0.5px solid #eee;*/
+  	box-shadow: 0 2x 3px #ccc;
+}
