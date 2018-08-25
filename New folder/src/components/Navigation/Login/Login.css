@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .Formdata{
 /*	width: 500px;
 	height: 500px;*/
@@ -37,4 +38,45 @@
     padding: 15px 30px;
     box-shadow: 2px 2px 2px #966909;
     box-sizing: border-box;
+=======
+.Formdata{
+/*	width: 500px;
+	height: 500px;*/
+	width: 50%;
+	height: 80%;
+	/*margin: auto;*/
+	margin: auto;
+	margin-top: 20%;
+	/*position: absolute;*/
+	/*padding: 25px 25px 25px 25px;*/
+	/*top:50px;*/
+	/*display: block;*/
+	background-color: #f4f4f4;
+	border: 5px red solid;
+	/*box-sizing: border-box;*/
+}
+
+.FormLable{
+	display: block;
+	margin: auto;
+	padding: 50px;
+	font: 30px bold;
+	box-sizing: border-box;
+	line-height: 1.6em;
+}
+
+.Submit{
+    outline: none;
+    cursor: pointer;
+    /*position: absolute;*/
+    /*height: 16px;*/
+    border: 1px solid #966909;
+    color: #966909;
+    font-family: inherit;
+    /*left: 50px;*/
+    font-size: 1.2em;
+    padding: 15px 30px;
+    box-shadow: 2px 2px 2px #966909;
+    box-sizing: border-box;
+>>>>>>> 24b39daf60f9793a65df2352f5f951f9944d7d7f
 }
