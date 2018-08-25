@@ -7,9 +7,9 @@ import Dropdown from '../DropDown/DropDown';
 
 const toolbar = ( props ) => {
 	let attachedClasses = [classes.Toolbar];
-    // if (props.open) {
-    //     attachedClasses = [classes.Toolbar, classes.Open];
-    // }
+    if (props.open) {
+        attachedClasses = [classes.Toolbar, classes.Open];
+    }
     
     
 	return (
@@ -22,7 +22,7 @@ const toolbar = ( props ) => {
             
             <div className={classes.Client}>
             <p className = {classes.Left}>Select Client:</p>
-            <Dropdown
+            <Dropdown className={classes.Left}
                       title={props.title}
                       list={props.list} selected = {props.selected}/>
             </div>
